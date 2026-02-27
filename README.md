@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-Rosé Crème is a Montreal-based dessert brand that acquires customers primarily through Instagram advertising.  
+Rose Creme is a Montreal-based dessert brand that acquires customers primarily through Instagram advertising.  
 Users click ads → send DMs → complete orders via Interac transfer.
 
 Because purchases are not tracked via Meta Pixel, **New Messaging Contacts** were used as the primary lead KPI.
