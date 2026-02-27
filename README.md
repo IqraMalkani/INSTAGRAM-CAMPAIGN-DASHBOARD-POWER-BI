@@ -122,3 +122,14 @@ DIVIDE([Total New Messaging Contacts],
 You can view the sales analysis dashboard here:  
 https://app.powerbi.com/view?r=eyJrIjoiYThjYmZjNjUtZjM4Ni00MDExLTgyMzMtOWMwNjhmODA5OWIyIiwidCI6ImYwZTZkMmNhLTg3MjgtNDgxMy1hYTI4LTM2MmM4NmNmMjBlNSJ9&pageName=78c0740403ed0ab68957
 
+## 🛡️ License
+
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+
+## 🌟 About Me
+
+Hi, I’m Iqra Malkani. I’m passionate about working with data and building projects across SQL, Power BI and Excel. I focus on creating practical solutions that turn data into meaningful insights and showcase skills that are valuable for business and analytics roles.
+
+You can explore more of my work on my website: www.iqramalkani.com
+
+
