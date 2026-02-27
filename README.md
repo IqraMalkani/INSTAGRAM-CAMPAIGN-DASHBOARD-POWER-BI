@@ -37,7 +37,7 @@ This structure ensures clean filtering, correct aggregation, and scalable modeli
 
 ## 📊 Dashboard – Executive Overview
 
-![Executive Overview](screenshots/page1_executive_overview.png)
+![Executive Overview](docs/executive_overview.PNG)
 
 ### KPIs
 
@@ -55,7 +55,7 @@ This page provides leadership-level visibility into efficiency trends and volume
 
 ## 🔍 Campaign Diagnostic View
 
-![Diagnostic View](screenshots/page2_diagnostic_view.png)
+![Diagnostic View](docs/campaign_performance.PNG)
 
 Includes:
 
