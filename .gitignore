@@ -1,0 +1,12 @@
+# Power BI files
+*.pbix
+*.pbit
+*.abf
+
+# Raw data files
+*.csv
+*.xlsx
+
+# OS junk
+.DS_Store
+Thumbs.db
