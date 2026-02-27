@@ -1,2 +1,117 @@
-# INSTAGRAM-CAMPAIGN-DASHBOARD-POWER-BI
-Power BI dashboard analyzing Instagram ad performance for Rose Creme. Built using a star schema (Fact + Dimensions), DAX measures, and campaign phase mapping to evaluate cost per messaging contact, conversion rate, and scale opportunities. Includes executive overview and campaign-level optimization analysis.
+# Rose Creme Instagram Campaign Performance Dashboard (Nov 2025 – Feb 2026)
+
+## 📌 Project Overview
+
+Rose Creme is a Montreal-based dessert brand that acquires customers through Instagram ads.  
+Users click ads → send DMs → complete orders via Interac transfer.
+
+Because purchases are not tracked through Meta Pixel, **New Messaging Contacts** were used as the primary lead KPI.
+
+This Power BI project evaluates:
+
+- Campaign efficiency
+- Cost per messaging contact
+- Conversion quality
+- Scale vs redesign decisions
+
+---
+
+## 🏗 Data Architecture
+
+![Architecture](architecture.png)
+
+### Model Design (Star Schema)
+
+- **Fact Table:** Campaign_Meta_Data
+- **Dimension Table:** Campaign Mapping (Campaign → Phase)
+- **Dimension Table:** DateTable (Calendar)
+
+Relationships:
+- Campaign Mapping (1) → Campaign_Meta_Data (*)
+- DateTable (1) → Campaign_Meta_Data (*)
+
+---
+
+## 📊 Dashboard – Executive Overview
+
+![Executive Overview](screenshots/page1_executive_overview.png)
+
+### KPIs:
+- Total Spend
+- Total New Messaging Contacts
+- Cost per New Messaging Contact
+- Messaging Conversion Rate
+
+Phase comparison:
+Winter → Product Expansion → Valentine
+
+---
+
+## 🔍 Campaign Diagnostic View
+
+![Diagnostic View](screenshots/page2_diagnostic_view.png)
+
+Includes:
+
+- Performance Matrix
+- Cost Ranking (Bar Chart)
+- Efficiency Quadrant (Scatter)
+- Dynamic Phase Slicer
+- Conditional formatting to flag zero-conversion campaigns
+
+---
+
+## 🧮 Core DAX Measures
+
+```DAX
+Spend =
+SUM('Campaign_Meta_Data'[Amount spent (CAD)])
+
+Total New Messaging Contacts =
+SUM('Campaign_Meta_Data'[New messaging contacts])
+
+Cost per New Msg Contact =
+DIVIDE([Spend], [Total New Messaging Contacts])
+
+Messaging Conversion Rate =
+DIVIDE([Total New Messaging Contacts],
+       SUM('Campaign_Meta_Data'[Unique clicks (all)]))
+
+
+---
+
+## 📈 Key Insights
+
+- **Product Expansion** generated the highest messaging volume.
+- **Winter Campaign** delivered the lowest cost per acquisition.
+- **Valentine phase** showed rising CPA with moderate conversion strength.
+- One campaign generated spend without conversions (flagged via conditional formatting).
+- High-conversion, low-spend campaigns identified as strong scale candidates.
+
+---
+
+## 🎯 What This Project Demonstrates
+
+- Business KPI translation into measurable analytics
+- Power Query data cleaning & transformation
+- Professional star schema modeling (Fact + Dimensions)
+- Advanced DAX measure construction
+- Marketing performance optimization analysis
+- Executive dashboard storytelling
+
+---
+
+## ⚠ Limitations
+
+- No tracked revenue (payments via Interac)
+- Aggregated export (no daily time breakdown)
+- No CRM integration for true ROI calculation
+
+---
+
+## 🚀 Future Improvements
+
+- Integrate order-level data
+- Build full funnel analysis (Impressions → Clicks → Messages → Orders → Revenue)
+- Add time-intelligence (Month-over-Month growth)
+- Automate refresh using structured folder source
