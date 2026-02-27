@@ -18,7 +18,7 @@ This Power BI project evaluates:
 
 ## 🏗 Data Architecture
 
-![Architecture](architecture.png)
+![Architecture](docs/Architecture.png)
 
 ### Model Design (Star Schema)
 
