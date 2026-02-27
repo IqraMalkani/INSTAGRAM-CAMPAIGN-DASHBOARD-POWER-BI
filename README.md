@@ -115,3 +115,10 @@ DIVIDE([Total New Messaging Contacts],
 - Build full funnel analysis (Impressions → Clicks → Messages → Orders → Revenue)
 - Add time-intelligence (Month-over-Month growth)
 - Automate refresh using structured folder source
+
+
+## Dashboard
+
+You can view the sales analysis dashboard here:  
+https://app.powerbi.com/view?r=eyJrIjoiYThjYmZjNjUtZjM4Ni00MDExLTgyMzMtOWMwNjhmODA5OWIyIiwidCI6ImYwZTZkMmNhLTg3MjgtNDgxMy1hYTI4LTM2MmM4NmNmMjBlNSJ9&pageName=78c0740403ed0ab68957
+
