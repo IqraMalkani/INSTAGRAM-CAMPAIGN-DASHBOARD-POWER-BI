@@ -1,18 +1,18 @@
-# Rose Creme Instagram Campaign Performance Dashboard (Nov 2025 – Feb 2026)
+# Rose Creme Instagram Campaign Performance Dashboard (Nov 2025-Feb 2026)
 
 ## 📌 Project Overview
 
-Rose Creme is a Montreal-based dessert brand that acquires customers through Instagram ads.  
+Rosé Crème is a Montreal-based dessert brand that acquires customers primarily through Instagram advertising.  
 Users click ads → send DMs → complete orders via Interac transfer.
 
-Because purchases are not tracked through Meta Pixel, **New Messaging Contacts** were used as the primary lead KPI.
+Because purchases are not tracked via Meta Pixel, **New Messaging Contacts** were used as the primary lead KPI.
 
 This Power BI project evaluates:
 
-- Campaign efficiency
-- Cost per messaging contact
-- Conversion quality
-- Scale vs redesign decisions
+- Campaign efficiency  
+- Cost per messaging contact  
+- Conversion quality  
+- Budget allocation decisions (scale vs redesign)
 
 ---
 
@@ -22,13 +22,16 @@ This Power BI project evaluates:
 
 ### Model Design (Star Schema)
 
-- **Fact Table:** Campaign_Meta_Data
-- **Dimension Table:** Campaign Mapping (Campaign → Phase)
-- **Dimension Table:** DateTable (Calendar)
+- **Fact Table:** `Campaign_Meta_Data`
+- **Dimension Table:** `Campaign Mapping` (Campaign → Phase)
+- **Dimension Table:** `DateTable` (Calendar + sorting structure)
 
-Relationships:
+### Relationships
+
 - Campaign Mapping (1) → Campaign_Meta_Data (*)
 - DateTable (1) → Campaign_Meta_Data (*)
+
+This structure ensures clean filtering, correct aggregation, and scalable modeling.
 
 ---
 
@@ -36,14 +39,17 @@ Relationships:
 
 ![Executive Overview](screenshots/page1_executive_overview.png)
 
-### KPIs:
-- Total Spend
-- Total New Messaging Contacts
-- Cost per New Messaging Contact
-- Messaging Conversion Rate
+### KPIs
 
-Phase comparison:
-Winter → Product Expansion → Valentine
+- Total Spend  
+- Total New Messaging Contacts  
+- Cost per New Messaging Contact  
+- Messaging Conversion Rate  
+
+Phase comparison:  
+Winter → Product Expansion → Valentine Push  
+
+This page provides leadership-level visibility into efficiency trends and volume shifts.
 
 ---
 
@@ -53,11 +59,13 @@ Winter → Product Expansion → Valentine
 
 Includes:
 
-- Performance Matrix
+- Performance Matrix (detailed breakdown)
 - Cost Ranking (Bar Chart)
-- Efficiency Quadrant (Scatter)
+- Efficiency Quadrant (Scatter Plot: Spend vs Conversion Rate)
 - Dynamic Phase Slicer
 - Conditional formatting to flag zero-conversion campaigns
+
+This view supports optimization and budget reallocation decisions.
 
 ---
 
@@ -74,10 +82,12 @@ Cost per New Msg Contact =
 DIVIDE([Spend], [Total New Messaging Contacts])
 
 Messaging Conversion Rate =
-DIVIDE([Total New Messaging Contacts],
-       SUM('Campaign_Meta_Data'[Unique clicks (all)]))
+DIVIDE(
+    [Total New Messaging Contacts],
+    SUM('Campaign_Meta_Data'[Unique clicks (all)])
+)
 
-
+```
 ---
 
 ## 📈 Key Insights
