@@ -1,4 +1,4 @@
-# Rose Creme Instagram Campaign Performance Dashboard (Nov 2025-Feb 2026)
+# Rose Creme Instagram Campaign Dashboard (Nov 2025-Feb 2026)
 
 ## 📌 Project Overview
 
